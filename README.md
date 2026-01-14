@@ -48,6 +48,14 @@ Harjoitukset on jaettu kuuteen osaan, jotka rakentuvat toistensa päälle:
 - Aggregointi ryhmittäin
 - Monimutkainen ryhmittely
 
+## Teoria-kysymykset
+
+Kun olet tehnyt kaikki kooditehtävät, vastaa myös teoria-kysymyksiin:
+
+📝 **[Teoria-kysymykset](Questions.md)**
+
+Tämä tehtävä testaa ymmärrystäsi Lambda-lausekkeista ja LINQ:stä. Vastaa kaikkiin kysymyksiin omilla sanoillasi ja tallenna vastauksesi samaan tiedostoon `Questions.md`.
+
 ## Lambda-syntaksin pikaohjeet
 
 ### Perussyntaksi
@@ -244,6 +252,7 @@ public static List<int> GetEvenNumbers(List<int> numbers)
 3. **Korvaa `throw new NotImplementedException();` omalla toteutuksella**
 4. **Aja testit** ja varmista että ne menevät läpi
 5. **Siirry seuraavaan tehtävään** kun testit menevät läpi
+
 
 ## Apua tarvitessa
 

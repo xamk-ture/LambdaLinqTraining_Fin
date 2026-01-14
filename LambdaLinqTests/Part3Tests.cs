@@ -1,4 +1,4 @@
-using LambdaLinqExercises;
+﻿using LambdaLinqExercises;
 using LambdaLinqExercises.Models;
 using Xunit;
 
@@ -6,6 +6,13 @@ namespace LambdaLinqTests
 {
     public class Part3Tests
     {
+        // Helper method to get property value from anonymous type
+        private static T? GetPropertyValue<T>(object obj, string propertyName)
+        {
+            var type = obj.GetType();
+            var property = type.GetProperty(propertyName);
+            return property != null ? (T?)property.GetValue(obj) : default(T);
+        }
         [Fact]
         public void Test_3_1_GetProductNames_ReturnsAllNames()
         {
@@ -82,19 +89,16 @@ namespace LambdaLinqTests
             Assert.Equal(3, result.Count);
 
             // Check first student
-            dynamic first = result[0];
-            Assert.Equal("Alice", first.Name);
-            Assert.True(first.IsAdult);
+            Assert.Equal("Alice", GetPropertyValue<string>(result[0], "Name"));
+            Assert.True(GetPropertyValue<bool>(result[0], "IsAdult"));
 
             // Check second student
-            dynamic second = result[1];
-            Assert.Equal("Bob", second.Name);
-            Assert.False(second.IsAdult);
+            Assert.Equal("Bob", GetPropertyValue<string>(result[1], "Name"));
+            Assert.False(GetPropertyValue<bool>(result[1], "IsAdult"));
 
             // Check third student
-            dynamic third = result[2];
-            Assert.Equal("Charlie", third.Name);
-            Assert.True(third.IsAdult);
+            Assert.Equal("Charlie", GetPropertyValue<string>(result[2], "Name"));
+            Assert.True(GetPropertyValue<bool>(result[2], "IsAdult"));
         }
 
         [Fact]

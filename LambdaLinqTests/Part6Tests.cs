@@ -6,6 +6,13 @@ namespace LambdaLinqTests
 {
     public class Part6Tests
     {
+        // Helper method to get property value from anonymous type
+        private static T? GetPropertyValue<T>(object obj, string propertyName)
+        {
+            var type = obj.GetType();
+            var property = type.GetProperty(propertyName);
+            return property != null ? (T?)property.GetValue(obj) : default(T);
+        }
         [Fact]
         public void Test_6_1_GroupProductsByCategory_GroupsCorrectly()
         {
@@ -153,26 +160,18 @@ namespace LambdaLinqTests
             Assert.Equal(2, result.Count);
 
             // Check IT department
-            dynamic itDept = result.FirstOrDefault(x =>
-            {
-                dynamic d = x;
-                return d.Department == "IT";
-            });
+            var itDept = result.FirstOrDefault(x => GetPropertyValue<string>(x, "Department") == "IT");
             Assert.NotNull(itDept);
-            Assert.Equal("IT", itDept.Department);
-            Assert.Equal(2, itDept.EmployeeCount);
-            Assert.Equal(5500.0, itDept.AverageSalary, precision: 2);
+            Assert.Equal("IT", GetPropertyValue<string>(itDept, "Department"));
+            Assert.Equal(2, GetPropertyValue<int>(itDept, "EmployeeCount"));
+            Assert.Equal(5500.0, GetPropertyValue<double>(itDept, "AverageSalary"), precision: 2);
 
             // Check HR department
-            dynamic hrDept = result.FirstOrDefault(x =>
-            {
-                dynamic d = x;
-                return d.Department == "HR";
-            });
+            var hrDept = result.FirstOrDefault(x => GetPropertyValue<string>(x, "Department") == "HR");
             Assert.NotNull(hrDept);
-            Assert.Equal("HR", hrDept.Department);
-            Assert.Equal(2, hrDept.EmployeeCount);
-            Assert.Equal(4250.0, hrDept.AverageSalary, precision: 2);
+            Assert.Equal("HR", GetPropertyValue<string>(hrDept, "Department"));
+            Assert.Equal(2, GetPropertyValue<int>(hrDept, "EmployeeCount"));
+            Assert.Equal(4250.0, GetPropertyValue<double>(hrDept, "AverageSalary"), precision: 2);
         }
 
         [Fact]
