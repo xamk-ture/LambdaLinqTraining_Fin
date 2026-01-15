@@ -8,6 +8,13 @@ Tämä tehtävä testaa ymmärrystäsi Lambda-lausekkeista ja LINQ:stä. Vastaa 
 - Jos et ole varma, yritä silti vastata - osittainen vastaus on parempi kuin ei mitään
 - Voit käyttää koodiesimerkkejä selventämään vastaustasi
 
+- **Hyödyllisiä linkkejä:**
+- [Lambda-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/Lambda.md)
+- [LINQ-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/LINQ.md)
+- [Delegaatit-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/Delegates.md)
+- [Predikaatit-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/Predicate.md)
+- [Clousures-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/Closures.md)
+
 ---
 
 ## OSA 1: Anonyymi funktio ja Lambda-lauseke
@@ -171,10 +178,6 @@ name => Console.WriteLine($"Hello, {name}!")
 
 ---
 
-### 8.2 Käytännön sovellus
-**Vastaa:** Kuvittele tilanne, jossa käyttäisit lambda-lausekkeita ja LINQ:ä oikeassa projektissa. Kuvaile tilannetta ja selitä, miksi nämä tekniikat sopivat siihen.
-
----
 
 ## Vastauksen palautus
 
@@ -186,9 +189,4 @@ Tallenna vastauksesi tähän tiedostoon ja muista pushata muutokset gittiin
 - Voit käyttää koodiesimerkkejä selventämään vastaustasi
 - Jos et ole varma jostain, yritä silti vastata
 
-**Hyödyllisiä linkkejä:**
-- [Lambda-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/Lambda.md)
-- [LINQ-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/LINQ.md)
-- [Delegaatit-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/Delegates.md)
-- [Predikaatit-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/Predicate.md)
-- [Clousures-oppimateriaali](https://github.com/xamk-mire/Xamk-wiki/blob/main/C%23/fin/00-Basics/Closures.md)
+
